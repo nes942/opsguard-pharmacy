@@ -26,6 +26,17 @@ Este documento contiene preguntas que deberias poder responder antes de presenta
 - Que diferencia hay entre DTO de request y DTO de response?
 - Que campos no deberian exponerse nunca en una respuesta?
 
+### Entidad `Category`
+
+Deberias poder explicar:
+
+- Por que `Category` lleva `@Entity`.
+- Por que se usa `@Table(name = "categories")` para mapear la clase a la tabla.
+- Por que `id` lleva `@Id` y `@GeneratedValue(strategy = GenerationType.IDENTITY)`.
+- Por que `name` se marcó como `nullable = false`.
+- Por que `createdAt` se mapea a `created_at` y `updatedAt` a `updated_at`.
+- Por que JPA necesita un constructor vacío.
+
 ## Validaciones
 
 - Para que sirve Bean Validation?

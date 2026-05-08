@@ -5,7 +5,7 @@ Este archivo registra el avance real del proyecto. Debe actualizarse al final de
 
 ## Estado global actual
 
-El proyecto tiene estructura base de Spring Boot, documentación inicial y módulos preparados.
+El proyecto tiene estructura base de Spring Boot, documentación inicial, módulos preparados y la entidad `Category` implementada.
 
 Todavía no hay CRUD implementado.
 
@@ -54,3 +54,56 @@ Implementar la entidad `Category`.
 - LocalDateTime
 - Boolean
 - constructor vacío en JPA
+
+## 2026-05-07
+
+### Estado al iniciar
+- El siguiente paso exacto era implementar la entidad `Category`.
+- No había entidades implementadas todavía.
+
+### Implementado
+- Se creó `src/main/java/com/opsguard/pharmacy/category/entity/Category.java`.
+- La entidad `Category` modela los campos:
+    - `id`
+    - `name`
+    - `description`
+    - `active`
+    - `createdAt`
+    - `updatedAt`
+- Se agregaron anotaciones JPA básicas:
+    - `@Entity`
+    - `@Table(name = "categories")`
+    - `@Id`
+    - `@GeneratedValue(strategy = GenerationType.IDENTITY)`
+    - `@Column`
+- Se agregó constructor vacío requerido por JPA.
+- Se agregaron getters y setters.
+
+### Verificación
+- El proyecto compila correctamente con:
+
+```bash
+./mvnw -q -DskipTests compile
+```
+
+### Commit realizado
+
+```bash
+976660c Add Category entity
+```
+
+### Pendiente
+- Todavía no hay repositorio, servicio, controlador, DTOs ni endpoints para categorías.
+- Todavía no hay entidad `Product`.
+- `.codex` aparece como archivo sin trackear y no debe incluirse salvo que se decida explícitamente.
+
+### Próximo paso exacto
+Crear la entidad `Product` y relacionarla con `Category` usando JPA.
+
+### Investigación dirigida para el próximo paso
+- `BigDecimal` para precios.
+- `Integer` para stock.
+- `@ManyToOne`.
+- `@JoinColumn`.
+- Relación muchos productos a una categoría.
+- Por qué evitar relaciones bidireccionales al inicio.

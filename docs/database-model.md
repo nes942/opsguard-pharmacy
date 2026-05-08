@@ -54,7 +54,12 @@ Relacion:
 
 Agrupa productos por tipo.
 
-Campos planeados:
+Estado de implementación:
+
+- Entidad JPA `Category` implementada.
+- Tabla configurada como `categories`.
+
+Campos implementados:
 
 - `id`
 - `name`
@@ -66,6 +71,7 @@ Campos planeados:
 Relaciones:
 
 - Una categoria tiene muchos productos.
+- La relación con `products` todavía no está implementada; se agregará cuando se cree la entidad `Product`.
 
 ### `products`
 
