@@ -86,16 +86,21 @@ Implementar la entidad `Category`.
 ./mvnw -q -DskipTests compile
 ```
 
-### Commit realizado
+### Commits realizados
 
 ```bash
 976660c Add Category entity
+1e85760 Update docs after Category entity implementation
 ```
+
+### Problemas encontrados
+- No hubo errores de compilación.
+- No hay endpoints todavía, así que no aplica prueba manual en Postman.
+- `.codex` aparece como archivo sin trackear y no debe incluirse salvo que se decida explícitamente.
 
 ### Pendiente
 - Todavía no hay repositorio, servicio, controlador, DTOs ni endpoints para categorías.
 - Todavía no hay entidad `Product`.
-- `.codex` aparece como archivo sin trackear y no debe incluirse salvo que se decida explícitamente.
 
 ### Próximo paso exacto
 Crear la entidad `Product` y relacionarla con `Category` usando JPA.
